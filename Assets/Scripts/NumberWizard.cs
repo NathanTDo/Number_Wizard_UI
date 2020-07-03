@@ -28,13 +28,13 @@ public class NumberWizard : MonoBehaviour
 
     public void OnPressHigher()
     {
-        min = guess + 1;
+        min = guess;
         NextGuess();
     }
 
     public void OnPressLower()
     {
-        max = guess - 1;
+        max = guess;
         NextGuess();
     }
     void NextGuess()
