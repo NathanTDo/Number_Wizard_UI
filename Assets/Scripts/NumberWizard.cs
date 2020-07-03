@@ -24,23 +24,22 @@ public class NumberWizard : MonoBehaviour
     void StartGame()
     {
         NextGuess();
-        max = max + 1;
     }
 
     public void OnPressHigher()
     {
-        min = guess;
+        min = guess + 1;
         NextGuess();
     }
 
     public void OnPressLower()
     {
-        max = guess;
+        max = guess - 1;
         NextGuess();
     }
     void NextGuess()
     {
-        guess = (max + min) / 2;
+        guess = Random.Range(min, max + 1);
         guessText.text = guess.ToString();
     }
 }
